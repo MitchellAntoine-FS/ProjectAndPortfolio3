@@ -180,7 +180,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="107.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DANK TANK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twp-ys-dTq">
-                                        <rect key="frame" x="122" y="37.5" width="170.5" height="33"/>
+                                        <rect key="frame" x="103.5" y="37.5" width="207" height="33"/>
                                         <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -188,7 +188,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.5" blue="0.02608028075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="twp-ys-dTq" firstAttribute="width" secondItem="yRB-sg-Tn0" secondAttribute="width" multiplier="0.411836" id="3nk-mN-eea"/>
+                                    <constraint firstItem="twp-ys-dTq" firstAttribute="width" secondItem="yRB-sg-Tn0" secondAttribute="width" multiplier="0.5" id="3nk-mN-eea"/>
                                     <constraint firstItem="twp-ys-dTq" firstAttribute="centerY" secondItem="yRB-sg-Tn0" secondAttribute="centerY" id="JXY-Cl-DJI"/>
                                     <constraint firstItem="twp-ys-dTq" firstAttribute="height" secondItem="yRB-sg-Tn0" secondAttribute="height" multiplier="0.306977" id="YB8-Uz-4KB"/>
                                     <constraint firstItem="twp-ys-dTq" firstAttribute="centerX" secondItem="yRB-sg-Tn0" secondAttribute="centerX" id="YVw-Hu-jZA"/>

@@ -7,7 +7,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
     
     var loggedIn = false
     
@@ -21,11 +23,18 @@ class HomeViewController: UIViewController {
             navigationController?.pushViewController(AgeVerifyViewController(), animated: true)
         }
         
-        
-    
     
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_ID", for: indexPath)
+        
+        return cell
+    }
 
     /*
     // MARK: - Navigation

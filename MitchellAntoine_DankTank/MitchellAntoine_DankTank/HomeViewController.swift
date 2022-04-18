@@ -9,7 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
     var strains = [Strains]()
     var loggedIn = false
     
@@ -37,7 +36,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 let jsonObj = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [Any]
                 
                 // At this point an array of Any objects that represents our Json data from our file
-                // We can now parse through the jsonObj and start instantiating out Customer objects.
+                // Now parse through the jsonObj and start instantiating out Customer objects.
                 
                 Parse(jsonObject: jsonObj)
                 
@@ -54,13 +53,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_ID", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_ID", for: indexPath) as! CollectionViewCell
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        <#code#>
+        let theCell = cell as? CollectionViewCell
+        
+        theCell?.SetupCell(strainNam: strains[indexPath.row].nameOf, imageString: strains[indexPath.row].imageUrl)
     }
 
     func Parse(jsonObject: [Any]? ) {
@@ -76,13 +77,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     // Get the property value of the current object
                   let name = object["name"] as? String,
                   let info = object["discription"] as? String,
-                  let effects = object["effects"] as? String,
+                  let effects = object["effect"] as? String,
                   let imageUrl = object["image"] as? String,
                   let condition = object["helps"] as? String,
                   let type = object["type"] as? String
                   
         // If anything in the gaurd fail, immediatley continue to the next iteration of the loop
-        else{ continue }
+        else{ return }
             
             strains.append(Strains(name: name, info: info, effects: effects, imageUrl: imageUrl, condition: condition, type: type))
                   

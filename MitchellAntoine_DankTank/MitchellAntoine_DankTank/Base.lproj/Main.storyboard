@@ -195,23 +195,48 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rn6-fF-TFo">
-                                <rect key="frame" x="5" y="154.5" width="404" height="657.5"/>
+                                <rect key="frame" x="5" y="154.5" width="195" height="214"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TMa-Cr-TLF">
-                                    <size key="itemSize" width="195" height="214"/>
+                                    <size key="itemSize" width="150" height="214"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell_ID" id="2eN-41-UUe">
-                                        <rect key="frame" x="0.0" y="0.0" width="195" height="214"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell_ID" id="yMv-Tv-Dwo" customClass="CollectionViewCell" customModule="MitchellAntoine_DankTank" customModuleProvider="target">
+                                        <rect key="frame" x="2.5" y="0.0" width="190" height="211"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hFD-a2-kXW">
-                                            <rect key="frame" x="0.0" y="0.0" width="195" height="214"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="k16-7U-loC">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="211"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3rt-Vj-eNz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="190" height="211"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strain Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RYr-wC-ABA">
+                                                    <rect key="frame" x="45" y="160" width="100" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="RYr-wC-ABA" secondAttribute="bottom" constant="30" id="8NX-UR-nLq"/>
+                                                <constraint firstItem="RYr-wC-ABA" firstAttribute="leading" secondItem="k16-7U-loC" secondAttribute="leading" constant="45" id="ElH-89-ZBt"/>
+                                                <constraint firstItem="RYr-wC-ABA" firstAttribute="centerX" secondItem="3rt-Vj-eNz" secondAttribute="centerX" id="Fvd-2V-zQa"/>
+                                                <constraint firstAttribute="bottom" secondItem="3rt-Vj-eNz" secondAttribute="bottom" id="LC5-6b-HLR"/>
+                                                <constraint firstItem="RYr-wC-ABA" firstAttribute="top" secondItem="k16-7U-loC" secondAttribute="top" constant="160" id="MNc-hG-Uc3"/>
+                                                <constraint firstItem="3rt-Vj-eNz" firstAttribute="leading" secondItem="k16-7U-loC" secondAttribute="leading" id="XFO-vQ-CoX"/>
+                                                <constraint firstAttribute="trailing" secondItem="3rt-Vj-eNz" secondAttribute="trailing" id="b16-Qf-1TI"/>
+                                                <constraint firstItem="3rt-Vj-eNz" firstAttribute="top" secondItem="k16-7U-loC" secondAttribute="top" id="dvs-Lq-12S"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RYr-wC-ABA" secondAttribute="trailing" id="tbf-tH-3qE"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="195" height="214"/>
+                                        <connections>
+                                            <outlet property="strainImage" destination="3rt-Vj-eNz" id="Qn4-ga-qzp"/>
+                                            <outlet property="strainNam" destination="RYr-wC-ABA" id="T5T-xj-UFP"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -237,10 +262,10 @@
                             <constraint firstItem="4lb-Pe-sXU" firstAttribute="leading" secondItem="DOq-G0-SGm" secondAttribute="leading" id="8sj-8r-blu"/>
                             <constraint firstItem="Rn6-fF-TFo" firstAttribute="leading" secondItem="DOq-G0-SGm" secondAttribute="leading" constant="5" id="GLr-7H-OD0"/>
                             <constraint firstItem="4lb-Pe-sXU" firstAttribute="trailing" secondItem="DOq-G0-SGm" secondAttribute="trailing" id="HF3-Er-9RN"/>
-                            <constraint firstItem="DOq-G0-SGm" firstAttribute="trailing" secondItem="Rn6-fF-TFo" secondAttribute="trailing" constant="5" id="Kyg-Wd-LSW"/>
+                            <constraint firstItem="DOq-G0-SGm" firstAttribute="trailing" secondItem="Rn6-fF-TFo" secondAttribute="trailing" constant="214" id="Kyg-Wd-LSW"/>
                             <constraint firstItem="yRB-sg-Tn0" firstAttribute="leading" secondItem="DOq-G0-SGm" secondAttribute="leading" id="Ve0-qN-FcC"/>
                             <constraint firstItem="yRB-sg-Tn0" firstAttribute="trailing" secondItem="DOq-G0-SGm" secondAttribute="trailing" id="bYl-7L-DlR"/>
-                            <constraint firstItem="4lb-Pe-sXU" firstAttribute="top" secondItem="Rn6-fF-TFo" secondAttribute="bottom" constant="3" id="eP7-fc-Ebr"/>
+                            <constraint firstItem="4lb-Pe-sXU" firstAttribute="top" secondItem="Rn6-fF-TFo" secondAttribute="bottom" constant="446.5" id="eP7-fc-Ebr"/>
                             <constraint firstItem="yRB-sg-Tn0" firstAttribute="top" secondItem="DOq-G0-SGm" secondAttribute="top" id="fO2-tv-MFc"/>
                             <constraint firstItem="DOq-G0-SGm" firstAttribute="bottom" secondItem="4lb-Pe-sXU" secondAttribute="bottom" constant="3" id="hhP-Og-aol"/>
                         </constraints>

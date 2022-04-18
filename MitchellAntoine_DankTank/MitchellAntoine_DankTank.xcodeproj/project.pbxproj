@@ -16,6 +16,7 @@
 		645C0A412807859300405842 /* RejectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645C0A402807859300405842 /* RejectionViewController.swift */; };
 		645C0A4328078AE000405842 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645C0A4228078AE000405842 /* HomeViewController.swift */; };
 		64F30D5D280A649300171AE6 /* HVC_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F30D5C280A649200171AE6 /* HVC_Extension.swift */; };
+		64F30D5F280CE0C100171AE6 /* Strains.json in Resources */ = {isa = PBXBuildFile; fileRef = 64F30D5E280CE0C100171AE6 /* Strains.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		645C0A402807859300405842 /* RejectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectionViewController.swift; sourceTree = "<group>"; };
 		645C0A4228078AE000405842 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		64F30D5C280A649200171AE6 /* HVC_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HVC_Extension.swift; sourceTree = "<group>"; };
+		64F30D5E280CE0C100171AE6 /* Strains.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Strains.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				64F30D5C280A649200171AE6 /* HVC_Extension.swift */,
 				645C0A302807762D00405842 /* AgeVerifyViewController.swift */,
 				645C0A402807859300405842 /* RejectionViewController.swift */,
+				64F30D5E280CE0C100171AE6 /* Strains.json */,
 				645C0A322807762D00405842 /* Main.storyboard */,
 				645C0A352807763500405842 /* Assets.xcassets */,
 				645C0A372807763500405842 /* LaunchScreen.storyboard */,
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64F30D5F280CE0C100171AE6 /* Strains.json in Resources */,
 				645C0A392807763500405842 /* LaunchScreen.storyboard in Resources */,
 				645C0A362807763500405842 /* Assets.xcassets in Resources */,
 				645C0A342807762D00405842 /* Main.storyboard in Resources */,

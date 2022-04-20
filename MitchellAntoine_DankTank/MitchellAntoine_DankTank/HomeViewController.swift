@@ -21,6 +21,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.dataSource = self
 
         // Get the path to our EmployeeData.json file
+        
         if let path = Bundle.main.path(forResource: "Strains", ofType: ".json") {
             
             // Create URL with path
@@ -49,7 +50,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return strains.count
+        return 37
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -62,6 +63,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let theCell = cell as? CollectionViewCell
         
         theCell?.SetupCell(strainNam: strains[indexPath.row].nameOf, imageString: strains[indexPath.row].imageUrl)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 
     func Parse(jsonObject: [Any]? ) {
@@ -100,5 +105,5 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

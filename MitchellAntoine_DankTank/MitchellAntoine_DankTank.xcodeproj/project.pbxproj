@@ -15,6 +15,7 @@
 		645C0A392807763500405842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645C0A372807763500405842 /* LaunchScreen.storyboard */; };
 		645C0A412807859300405842 /* RejectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645C0A402807859300405842 /* RejectionViewController.swift */; };
 		645C0A4328078AE000405842 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645C0A4228078AE000405842 /* HomeViewController.swift */; };
+		64B4BC15280F9B3400432EC6 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B4BC14280F9B3400432EC6 /* DetailsViewController.swift */; };
 		64F30D5F280CE0C100171AE6 /* Strains.json in Resources */ = {isa = PBXBuildFile; fileRef = 64F30D5E280CE0C100171AE6 /* Strains.json */; };
 		64F30D61280D042100171AE6 /* Strains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F30D60280D042100171AE6 /* Strains.swift */; };
 		64F30D63280D0D3300171AE6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F30D62280D0D3300171AE6 /* CollectionViewCell.swift */; };
@@ -31,6 +32,7 @@
 		645C0A3A2807763500405842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		645C0A402807859300405842 /* RejectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectionViewController.swift; sourceTree = "<group>"; };
 		645C0A4228078AE000405842 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		64B4BC14280F9B3400432EC6 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		64F30D5E280CE0C100171AE6 /* Strains.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Strains.json; sourceTree = "<group>"; };
 		64F30D60280D042100171AE6 /* Strains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strains.swift; sourceTree = "<group>"; };
 		64F30D62280D0D3300171AE6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				645C0A4228078AE000405842 /* HomeViewController.swift */,
 				64F30D62280D0D3300171AE6 /* CollectionViewCell.swift */,
 				64F30D60280D042100171AE6 /* Strains.swift */,
+				64B4BC14280F9B3400432EC6 /* DetailsViewController.swift */,
 				645C0A302807762D00405842 /* AgeVerifyViewController.swift */,
 				645C0A402807859300405842 /* RejectionViewController.swift */,
 				64F30D5E280CE0C100171AE6 /* Strains.json */,
@@ -157,6 +160,7 @@
 				64F30D61280D042100171AE6 /* Strains.swift in Sources */,
 				645C0A4328078AE000405842 /* HomeViewController.swift in Sources */,
 				645C0A312807762D00405842 /* AgeVerifyViewController.swift in Sources */,
+				64B4BC15280F9B3400432EC6 /* DetailsViewController.swift in Sources */,
 				64F30D63280D0D3300171AE6 /* CollectionViewCell.swift in Sources */,
 				645C0A2D2807762D00405842 /* AppDelegate.swift in Sources */,
 				645C0A412807859300405842 /* RejectionViewController.swift in Sources */,

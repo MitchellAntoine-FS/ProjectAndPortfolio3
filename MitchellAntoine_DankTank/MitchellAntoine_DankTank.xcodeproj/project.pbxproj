@@ -19,6 +19,10 @@
 		64B4BC172813A3B300432EC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64B4BC162813A3B300432EC6 /* GoogleService-Info.plist */; };
 		64B4BC1A2813A82600432EC6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 64B4BC192813A82600432EC6 /* FirebaseAuth */; };
 		64B4BC1C2813A82600432EC6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 64B4BC1B2813A82600432EC6 /* FirebaseStorage */; };
+		64B4BC1E2814EBCF00432EC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B4BC1D2814EBCF00432EC6 /* SignUpViewController.swift */; };
+		64B4BC202814EBE600432EC6 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B4BC1F2814EBE600432EC6 /* LogInViewController.swift */; };
+		64B4BC222814F12100432EC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B4BC212814F12100432EC6 /* ViewController.swift */; };
+		64B4BC28281501DB00432EC6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B4BC27281501DB00432EC6 /* Utilities.swift */; };
 		64F30D5F280CE0C100171AE6 /* Strains.json in Resources */ = {isa = PBXBuildFile; fileRef = 64F30D5E280CE0C100171AE6 /* Strains.json */; };
 		64F30D61280D042100171AE6 /* Strains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F30D60280D042100171AE6 /* Strains.swift */; };
 		64F30D63280D0D3300171AE6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F30D62280D0D3300171AE6 /* CollectionViewCell.swift */; };
@@ -37,6 +41,10 @@
 		645C0A4228078AE000405842 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		64B4BC14280F9B3400432EC6 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		64B4BC162813A3B300432EC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		64B4BC1D2814EBCF00432EC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		64B4BC1F2814EBE600432EC6 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		64B4BC212814F12100432EC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		64B4BC27281501DB00432EC6 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		64F30D5E280CE0C100171AE6 /* Strains.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Strains.json; sourceTree = "<group>"; };
 		64F30D60280D042100171AE6 /* Strains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strains.swift; sourceTree = "<group>"; };
 		64F30D62280D0D3300171AE6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -76,12 +84,10 @@
 			children = (
 				645C0A2C2807762D00405842 /* AppDelegate.swift */,
 				645C0A2E2807762D00405842 /* SceneDelegate.swift */,
-				645C0A4228078AE000405842 /* HomeViewController.swift */,
+				64B4BC29281502EA00432EC6 /* Helpers */,
+				64B4BC232814F15900432EC6 /* ViewControllers */,
 				64F30D62280D0D3300171AE6 /* CollectionViewCell.swift */,
 				64F30D60280D042100171AE6 /* Strains.swift */,
-				64B4BC14280F9B3400432EC6 /* DetailsViewController.swift */,
-				645C0A302807762D00405842 /* AgeVerifyViewController.swift */,
-				645C0A402807859300405842 /* RejectionViewController.swift */,
 				64F30D5E280CE0C100171AE6 /* Strains.json */,
 				645C0A322807762D00405842 /* Main.storyboard */,
 				645C0A352807763500405842 /* Assets.xcassets */,
@@ -90,6 +96,28 @@
 				64B4BC162813A3B300432EC6 /* GoogleService-Info.plist */,
 			);
 			path = MitchellAntoine_DankTank;
+			sourceTree = "<group>";
+		};
+		64B4BC232814F15900432EC6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				64B4BC212814F12100432EC6 /* ViewController.swift */,
+				64B4BC1D2814EBCF00432EC6 /* SignUpViewController.swift */,
+				64B4BC1F2814EBE600432EC6 /* LogInViewController.swift */,
+				645C0A4228078AE000405842 /* HomeViewController.swift */,
+				64B4BC14280F9B3400432EC6 /* DetailsViewController.swift */,
+				645C0A302807762D00405842 /* AgeVerifyViewController.swift */,
+				645C0A402807859300405842 /* RejectionViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		64B4BC29281502EA00432EC6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				64B4BC27281501DB00432EC6 /* Utilities.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +204,13 @@
 				645C0A4328078AE000405842 /* HomeViewController.swift in Sources */,
 				645C0A312807762D00405842 /* AgeVerifyViewController.swift in Sources */,
 				64B4BC15280F9B3400432EC6 /* DetailsViewController.swift in Sources */,
+				64B4BC222814F12100432EC6 /* ViewController.swift in Sources */,
 				64F30D63280D0D3300171AE6 /* CollectionViewCell.swift in Sources */,
+				64B4BC28281501DB00432EC6 /* Utilities.swift in Sources */,
 				645C0A2D2807762D00405842 /* AppDelegate.swift in Sources */,
+				64B4BC1E2814EBCF00432EC6 /* SignUpViewController.swift in Sources */,
 				645C0A412807859300405842 /* RejectionViewController.swift in Sources */,
+				64B4BC202814EBE600432EC6 /* LogInViewController.swift in Sources */,
 				645C0A2F2807762D00405842 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

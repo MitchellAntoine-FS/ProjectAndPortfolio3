@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+
 
 class LogInViewController: UIViewController {
 
@@ -34,16 +37,55 @@ class LogInViewController: UIViewController {
         
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func logInButton(_ sender: UIButton) {
+        
+        // Validate the text fields
+        
+        //
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // Sign in the user
+        Auth.auth().signIn(withEmail: email, password: password) { (results, error) in
+            if error != nil {
+                // Couldn't sign in
+                self.errorLabel.text = error!.localizedDescription
+                self.errorLabel.alpha = 1
+            }
+            else {
+                
+                self.goToHomeView()
+
+            }
+        }
+    }
+    
+    func validateFields() -> String? {
+        
+        // Check that all fields are filled in
+        if self.emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == " " ||
+            self.passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == " " {
+            
+            return "Please fill in all fileds"
+        }
+        
+        // Check if password is secure
+        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if Utilities.isPasswordValid(cleanedPassword) == false {
+            // Password is not secure
+            return "Make sure your password is at least 8 characters, contains a special character and a number"
+        }
+        
+        return nil
+    }
+    
+    func goToHomeView() {
+        
+        let homeViewController = storyboard?.instantiateViewController(withIdentifier: Constant.Storyboard.homeViewController) as? HomeViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
     }
     
 }

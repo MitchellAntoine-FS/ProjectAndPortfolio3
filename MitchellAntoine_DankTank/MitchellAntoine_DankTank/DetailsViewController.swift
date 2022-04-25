@@ -18,30 +18,59 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var effectsLabel: UILabel!
-    @IBOutlet weak var saveToProfileLable: UIButton!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        setUI()
+//        SetupCell(imageString: strain.imageUrl)
+        
+    }
+    
+    func setUI() {
+        
+        self.strainName.text = strain.nameOf
+        self.strainInfo.text = strain.infoOf
+        self.typeLabel.text = strain.typeOf
+        self.conditionLabel.text = strain.conditionOf
+        self.effectsLabel.text = strain.effectsOf
         
         
     }
     
+    func SetupCell(imageString: String) {
+        
+        
+        do {
 
-    /*
-    // MARK: - Navigation
+        if imageString.contains("http"),
+            let url = URL(string: imageString),
+                var urlComp = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        {
+            // Change to secure server.
+            urlComp.scheme = "https"
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+                if let secureURL = urlComp.url {
+
+                    let data = try Data.init(contentsOf: secureURL)
+                    self.strainImage.image = UIImage(data: data)
+                }
+            }
+        }
+        catch {
+            print(error.localizedDescription)
+            assertionFailure();
+        }
     }
-    */
     
     @IBAction func saveToProfile(_ sender: Any) {
     }
     
+    @IBAction func homeButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
 

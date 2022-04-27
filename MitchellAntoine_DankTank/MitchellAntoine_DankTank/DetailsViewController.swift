@@ -24,8 +24,8 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        setUI()
-//        SetupCell(imageString: strain.imageUrl)
+        setUI()
+        SetupCell(imageString: strain.imageUrl)
         
     }
     

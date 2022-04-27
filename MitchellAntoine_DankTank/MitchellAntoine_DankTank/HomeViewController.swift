@@ -7,7 +7,6 @@
 
 import UIKit
 import FirebaseAuth
-import FirebaseStorage
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -72,11 +71,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vC = storyboard?.instantiateViewController(withIdentifier: "detail") as? DetailsViewController
-        
-        vC?.strain = strains[indexPath.row]
-        
-        self.navigationController?.pushViewController(vC!, animated: true)
+
+        performSegue(withIdentifier: "segue", sender: indexPath)
     }
 
     func Parse(jsonObject: [Any]? ) {
@@ -110,16 +106,17 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        let indexPath = collectionView.indexPathForItem(at: .zero)
-//
-//        if segue.identifier == "segue",
-//        let destination = segue.destination as? DetailsViewController {
-//            destination.strain = strains[indexPath!.row]
-//        }
-//
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if let indexPath = collectionView.indexPathForItem(at: .zero) {
+
+            if segue.identifier == "segue",
+            let destination = segue.destination as? DetailsViewController {
+                destination.strain = strains[indexPath.row]
+            }
+        }
+
+    }
     
     
 }

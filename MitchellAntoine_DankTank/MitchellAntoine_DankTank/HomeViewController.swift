@@ -21,7 +21,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.delegate = self
         collectionView.dataSource = self
 
-        // Get the path to our EmployeeData.json file
+        // Get the path to our Strains.json file
         
         if let path = Bundle.main.path(forResource: "Strains", ofType: ".json") {
             

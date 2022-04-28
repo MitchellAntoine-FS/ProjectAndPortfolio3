@@ -488,7 +488,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VG4-aO-gYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2235" y="430"/>
+            <point key="canvasLocation" x="2279" y="574"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="UGg-8q-s7D">
@@ -499,7 +499,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRB-sg-Tn0" userLabel="AppNameView">
-                                <rect key="frame" x="0.0" y="44" width="428" height="111"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="111"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DANK TANK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twp-ys-dTq">
                                         <rect key="frame" x="107" y="38.666666666666671" width="214" height="34"/>
@@ -517,7 +517,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rn6-fF-TFo">
-                                <rect key="frame" x="5" y="158" width="418" height="674"/>
+                                <rect key="frame" x="5" y="202" width="418" height="630"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HRK-CO-xFt">
                                     <size key="itemSize" width="128" height="128"/>
@@ -606,27 +606,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INt-nc-LKT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2365" y="-623"/>
+            <point key="canvasLocation" x="2851" y="-892"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="nuE-J2-G4m">
             <objects>
                 <viewController storyboardIdentifier="detail" id="aYy-kj-Rd3" customClass="DetailsViewController" customModule="MitchellAntoine_DankTank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5I7-Xk-NMd" customClass="D">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AeT-LF-8CT" userLabel="AppNameView">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="104.66666666666667"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="111"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DANK TANK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8lI-fm-j0N">
-                                        <rect key="frame" x="128.66666666666669" y="36" width="170.66666666666669" height="33"/>
+                                        <rect key="frame" x="128.66666666666669" y="38" width="170.66666666666669" height="35"/>
                                         <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKy-V2-bn8">
-                                        <rect key="frame" x="318" y="2.9999999999999982" width="107" height="29.333333333333329"/>
+                                        <rect key="frame" x="318" y="3" width="107" height="31"/>
                                         <color key="backgroundColor" red="0.21535870430000001" green="0.4931508899" blue="0.1410725713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Add  " cornerStyle="large">
@@ -652,22 +652,22 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gorilla-glue-4" translatesAutoresizingMaskIntoConstraints="NO" id="z1B-MV-fvj">
-                                <rect key="frame" x="94" y="114.66666666666669" width="240" height="197"/>
+                                <rect key="frame" x="94" y="209" width="240" height="209.33333333333337"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About:  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="50q-lX-yxB">
-                                <rect key="frame" x="47.000000000000007" y="321.66666666666669" width="74.666666666666686" height="24"/>
+                                <rect key="frame" x="47.000000000000007" y="428.33333333333331" width="74.666666666666686" height="25.666666666666686"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gorilla Glue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2Vc-aV-9Zs">
-                                <rect key="frame" x="149.66666666666666" y="321.66666666666669" width="128.99999999999997" height="24"/>
+                                <rect key="frame" x="149.66666666666666" y="428.33333333333331" width="128.99999999999997" height="25.666666666666686"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOn-jq-iZ4">
-                                <rect key="frame" x="53" y="362.66666666666669" width="327" height="253.00000000000006"/>
+                                <rect key="frame" x="53" y="471" width="327" height="268.33333333333326"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <mutableString key="text">Gorilla Glue #4 (also known as GG4) created by GG strains is a Sativa-dominant hybrid, a multiple award-winning strain, famous for its high THC content. This strain gets its name because of the resin that collects on the scissors when trimming. Gorilla Glue #4 has several parents due to extensive backcrossing – Sour Diesel, Sour Dubb, Chem’s Sister, and Chocolate Diesel. The hybrid strain has won awards at the 2014 Cannabis Cup in both Los Angeles and Michigan. It has been described as a bunch of trichomes with a few buds, leaves, and stalks sticking out.</mutableString>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -675,43 +675,43 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Effects  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MnF-Me-pLp">
-                                <rect key="frame" x="53.000000000000007" y="635.66666666666663" width="65.666666666666686" height="25.333333333333371"/>
+                                <rect key="frame" x="53.000000000000007" y="759.33333333333337" width="65.666666666666686" height="27"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditions    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yyp-3z-bml">
-                                <rect key="frame" x="52.999999999999993" y="681" width="107.33333333333331" height="25"/>
+                                <rect key="frame" x="52.999999999999993" y="806.33333333333337" width="107.33333333333331" height="26.666666666666629"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hgD-3h-lSt">
-                                <rect key="frame" x="53" y="726" width="45.666666666666657" height="25.333333333333371"/>
+                                <rect key="frame" x="53" y="853" width="45.666666666666657" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relaxed, Sleepy, Coton mouth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QgN-Jk-Iox">
-                                <rect key="frame" x="156.66666666666669" y="640" width="244.66666666666669" height="21"/>
+                                <rect key="frame" x="156.66666666666669" y="764" width="244.66666666666669" height="22.333333333333371"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depression, Anxiety, Insomnia  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iPn-fb-C2P">
-                                <rect key="frame" x="156.66666666666663" y="681" width="252" height="21"/>
+                                <rect key="frame" x="156.66666666666663" y="806.33333333333337" width="252" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hybrid   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pGS-uj-hk4">
-                                <rect key="frame" x="156.66666666666666" y="722" width="69" height="21"/>
+                                <rect key="frame" x="156.66666666666666" y="847.33333333333337" width="69" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9UW-vA-itv">
-                                <rect key="frame" x="0.0" y="809" width="428" height="41.333333333333371"/>
+                                <rect key="frame" x="0.0" y="860.33333333333337" width="428" height="44"/>
                                 <color key="backgroundColor" red="0.21535870430000001" green="0.4931508899" blue="0.1410725713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
                                     <barButtonItem title="Home" image="house" catalog="system" id="KKh-ko-wnx">
@@ -720,17 +720,9 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Eur-Lb-SEI"/>
-                                    <barButtonItem systemItem="search" id="jM2-Zd-v30">
-                                        <connections>
-                                            <segue destination="eZf-8G-sFo" kind="show" id="k0v-Uk-7q8"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem systemItem="search" id="jM2-Zd-v30"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="rca-Q4-pbc"/>
-                                    <barButtonItem title="Item" image="person" catalog="system" id="rCB-8m-Zho" userLabel="Profile">
-                                        <connections>
-                                            <segue destination="Z18-wC-vy8" kind="show" id="Ea9-rR-KzC"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem title="Item" image="person" catalog="system" id="rCB-8m-Zho" userLabel="Profile"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -802,18 +794,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYF-Xb-aYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3171" y="-891"/>
+            <point key="canvasLocation" x="4112" y="-412"/>
         </scene>
         <!--SEARCH-->
         <scene sceneID="mCr-sT-x4b">
             <objects>
                 <viewController title="SEARCH" id="eZf-8G-sFo" customClass="SearchViewController" customModule="MitchellAntoine_DankTank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zlU-Ra-j9l">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qpm-X0-eki" userLabel="AppNameView">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="94.333333333333329"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="94.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DANK TANK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxk-Hg-EU1">
                                         <rect key="frame" x="107" y="30.666666666666671" width="214" height="33"/>
@@ -831,7 +823,7 @@
                                 </constraints>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sr7-Aj-6bJ">
-                                <rect key="frame" x="0.0" y="789" width="428" height="49"/>
+                                <rect key="frame" x="0.0" y="843" width="428" height="49"/>
                                 <color key="backgroundColor" red="0.21535870430000001" green="0.4931508899" blue="0.1410725713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="27C-Aj-MVe"/>
@@ -841,11 +833,15 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9Nk-Fg-rFa"/>
                                     <barButtonItem systemItem="search" id="nZS-4c-k32"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tmE-oO-bGn"/>
-                                    <barButtonItem title="Item" image="person" catalog="system" id="onm-RI-AN3" userLabel="Profile"/>
+                                    <barButtonItem title="Item" image="person" catalog="system" id="onm-RI-AN3" userLabel="Profile">
+                                        <connections>
+                                            <segue destination="Z18-wC-vy8" kind="show" id="O46-3S-1nf"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oaP-Lf-S3S">
-                                <rect key="frame" x="0.0" y="97.333333333333314" width="428" height="688.66666666666674"/>
+                                <rect key="frame" x="0.0" y="185.33333333333331" width="428" height="654.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell_ID1" textLabel="trk-oU-S1c" imageView="dUv-w6-RJM" style="IBUITableViewCellStyleDefault" id="Lor-OI-a89">
@@ -868,6 +864,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="aYy-kj-Rd3" kind="show" id="OxV-Sb-alS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -894,18 +893,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTM-Af-Qw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3024" y="189"/>
+            <point key="canvasLocation" x="2373" y="-174"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ePa-V3-x68">
             <objects>
                 <viewController title="Profile" id="Z18-wC-vy8" customClass="ProfileViewController" customModule="MitchellAntoine_DankTank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sYj-ec-v3W" customClass="Pro">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h84-dd-aNW" userLabel="AppNameView">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="94.333333333333329"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="94.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DANK TANK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hk-UB-pvg">
                                         <rect key="frame" x="107" y="30.666666666666671" width="214" height="33"/>
@@ -923,7 +922,7 @@
                                 </constraints>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKA-74-wFL">
-                                <rect key="frame" x="0.0" y="789" width="428" height="49"/>
+                                <rect key="frame" x="0.0" y="843" width="428" height="49"/>
                                 <color key="backgroundColor" red="0.21535870430000001" green="0.4931508899" blue="0.1410725713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="5zE-QH-7ST"/>
@@ -952,7 +951,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7v-4B-Lko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4015" y="-171"/>
+            <point key="canvasLocation" x="3456" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sh3-4Y-yyj">
@@ -972,10 +971,28 @@
             </objects>
             <point key="canvasLocation" x="62" y="189"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xjo-ig-9d2">
+            <objects>
+                <navigationController storyboardIdentifier="NavVC" automaticallyAdjustsScrollViewInsets="NO" id="nL9-j8-WOT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MSe-xD-6r4">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Via-04-DVM" kind="relationship" relationship="rootViewController" id="ozq-qb-tqP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZd-ab-IpT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1883" y="-976"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9sO-uS-FcL"/>
-        <segue reference="V5q-hY-hrr"/>
+        <segue reference="O46-3S-1nf"/>
+        <segue reference="OxV-Sb-alS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CannaBackground" width="1024" height="1024"/>

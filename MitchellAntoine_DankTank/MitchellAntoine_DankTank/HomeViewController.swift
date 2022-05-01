@@ -108,14 +108,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if let indexPath = collectionView.indexPathForItem(at: .zero) {
-
-            if segue.identifier == "segue",
-            let destination = segue.destination as? DetailsViewController {
+        if segue.identifier == "segue"{
+        
+            if let cell = sender as? UICollectionViewCell, let indexPath = self.collectionView.indexPath(for: cell) {
+    
+                if let destination = segue.destination as? DetailsViewController {
                 destination.strain = strains[indexPath.row]
             }
         }
-
+}
     }
     
     

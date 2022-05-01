@@ -11,6 +11,7 @@ import FirebaseStorage
 class DetailsViewController: UIViewController {
     
     var strain: Strains!
+    var profileArray: [Strains] = []
     
     @IBOutlet weak var strainImage: UIImageView!
     @IBOutlet weak var strainName: UILabel!
@@ -66,10 +67,14 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func saveToProfile(_ sender: Any) {
+        
+        profileArray.append(strain)
+        
+        
     }
     
     @IBAction func homeButton(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     

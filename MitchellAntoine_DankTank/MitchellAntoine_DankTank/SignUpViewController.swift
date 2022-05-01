@@ -65,13 +65,7 @@ class SignUpViewController: UIViewController {
     
 
     @IBAction func signUpButton(_ sender: UIButton) {
-        
-        // Validate the fields
-//        let error = validateFields()
-        
-        // Create clean versons of the data
-//        let firstName = firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-//        let lastName = lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+       
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
@@ -83,19 +77,10 @@ class SignUpViewController: UIViewController {
             self.showError("Error creating user")
         }
         else {
-            // User was created successfully, store user info
-//            let db = Firestore.firestore()
-//
-//            db.collection("users").addDocument(data: ["firstName":firstName, "lastName":lastName, "uid": result!.user.uid]) { (error) in
-//
-//                if error != nil {
-//                    self.showError("Error saving user data")
-//                }
-//            }
-            // Transition the home screen
+            
             self.goToHomeView()
         }
-        }
+    }
         
         
     }
@@ -107,11 +92,11 @@ class SignUpViewController: UIViewController {
     
     func goToHomeView() {
         
-            if let navController = storyboard?.instantiateViewController(withIdentifier: "NavVC") as? UINavigationController {
-                let homeViewController = navController.topViewController as? HomeViewController
-            
-            view.window?.rootViewController = homeViewController
-            view.window?.makeKeyAndVisible()
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        if let navController = mainStoryBoard.instantiateViewController(withIdentifier: "NavVC") as? UINavigationController {
+
+            present(navController, animated: true, completion: nil )
         }
     }
 }

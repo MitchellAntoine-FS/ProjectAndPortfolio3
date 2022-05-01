@@ -8,6 +8,8 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    var strains: Strains!
 
     override func viewDidLoad() {
         super.viewDidLoad()

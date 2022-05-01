@@ -36,6 +36,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Setup searchBar of search controller
         searchController.searchBar.scopeButtonTitles = ["All", "Sativa", "Indica", "Hybrid"]
         searchController.searchBar.delegate = self
+        searchController.searchBar.backgroundColor = .white
         
         navigationItem.searchController = searchController
         
@@ -75,6 +76,31 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell_ID1", for: indexPath)
         
+        cell.textLabel?.text = strainsArray[indexPath.row].nameOf
+        
+        let imageString = strainsArray[indexPath.row].imageUrl
+        
+        do {
+
+        if imageString.contains("http"),
+            let url = URL(string: imageString),
+                var urlComp = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        {
+            // Change to secure server.
+            urlComp.scheme = "https"
+
+                if let secureURL = urlComp.url {
+
+                    let data = try Data.init(contentsOf: secureURL)
+                    cell.imageView?.image = UIImage(data: data)
+                }
+            }
+        }
+        catch {
+            print(error.localizedDescription)
+            assertionFailure();
+        }
+         
         
         return cell
     }
@@ -144,14 +170,27 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
 
-    /*
+    @IBAction func homeButton(_ sender: UIBarButtonItem) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func profileButton(_ sender: UIBarButtonItem) {
+        navigationController?.pushViewController(ProfileViewController(), animated: true)
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            // Get the new view controller using segue.destination.
+            if let destination = segue.destination as? DetailsViewController {
+            // Pass the selected object to the new view controller.
+                destination.strain = strainsArray[indexPath.row]
+            }
+            
+        }
     }
-    */
 
 }

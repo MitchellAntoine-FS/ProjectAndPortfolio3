@@ -82,11 +82,11 @@ class LogInViewController: UIViewController {
     
     func goToHomeView() {
         
-            if let navController = storyboard?.instantiateViewController(withIdentifier: "NavVC") as? UINavigationController {
-                let homeViewController = navController.topViewController as? HomeViewController
-            
-            view.window?.rootViewController = homeViewController
-            view.window?.makeKeyAndVisible()
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        if let navController = mainStoryBoard.instantiateViewController(withIdentifier: "NavVC") as? UINavigationController {
+
+            present(navController, animated: true, completion: nil )
         }
     }
 }

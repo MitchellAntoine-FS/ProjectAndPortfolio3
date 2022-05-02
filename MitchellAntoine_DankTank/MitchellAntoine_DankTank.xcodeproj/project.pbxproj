@@ -95,7 +95,6 @@
 				64B4BC29281502EA00432EC6 /* Helpers */,
 				64B4BC232814F15900432EC6 /* ViewControllers */,
 				64F30D62280D0D3300171AE6 /* CollectionViewCell.swift */,
-				64B4BC2C28164A6300432EC6 /* UserDefaults.swift */,
 				64F30D60280D042100171AE6 /* Strains.swift */,
 				64F30D5E280CE0C100171AE6 /* Strains.json */,
 				645C0A322807762D00405842 /* Main.storyboard */,
@@ -126,6 +125,7 @@
 		64B4BC29281502EA00432EC6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				64B4BC2C28164A6300432EC6 /* UserDefaults.swift */,
 				64B4BC27281501DB00432EC6 /* Utilities.swift */,
 				64B4BC2A2815254D00432EC6 /* Constant.swift */,
 			);

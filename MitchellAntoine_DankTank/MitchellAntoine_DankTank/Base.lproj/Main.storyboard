@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -529,6 +530,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="PoQ-Qj-T7x">
+                                    <rect key="frame" x="0.0" y="0.0" width="418" height="630"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" name="AccentColor"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell_ID" id="yMv-Tv-Dwo" customClass="CollectionViewCell" customModule="MitchellAntoine_DankTank" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
@@ -607,6 +613,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="OAn-Hy-8dn"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="PoQ-Qj-T7x" id="LB7-32-Uoj"/>
                         <outlet property="collectionView" destination="Rn6-fF-TFo" id="BSS-sD-nmx"/>
                     </connections>
                 </viewController>
@@ -726,9 +733,17 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Eur-Lb-SEI"/>
-                                    <barButtonItem systemItem="search" id="jM2-Zd-v30"/>
+                                    <barButtonItem systemItem="search" id="jM2-Zd-v30">
+                                        <connections>
+                                            <action selector="searchButton:" destination="aYy-kj-Rd3" id="oK2-tw-qzj"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="rca-Q4-pbc"/>
-                                    <barButtonItem title="Item" image="person" catalog="system" id="rCB-8m-Zho" userLabel="Profile"/>
+                                    <barButtonItem title="Item" image="person" catalog="system" id="rCB-8m-Zho" userLabel="Profile">
+                                        <connections>
+                                            <action selector="profileButton:" destination="aYy-kj-Rd3" id="bab-S0-p39"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -790,7 +805,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5A7-7I-cH7"/>
                     <connections>
-                        <outlet property="conditionLabel" destination="pGS-uj-hk4" id="KX1-NL-uRl"/>
+                        <outlet property="conditionLabel" destination="iPn-fb-C2P" id="2si-DT-cfi"/>
                         <outlet property="effectsLabel" destination="QgN-Jk-Iox" id="mFG-0q-Sn8"/>
                         <outlet property="strainImage" destination="z1B-MV-fvj" id="P5g-Lo-hzD"/>
                         <outlet property="strainInfo" destination="LOn-jq-iZ4" id="ajz-Ss-byd"/>
@@ -939,26 +954,94 @@
                                     <constraint firstAttribute="height" constant="49" id="5zE-QH-7ST"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Home" image="house" catalog="system" id="BJ0-qJ-FfG"/>
+                                    <barButtonItem title="Home" image="house" catalog="system" id="BJ0-qJ-FfG">
+                                        <connections>
+                                            <action selector="homeButton:" destination="Z18-wC-vy8" id="zh8-hf-MSF"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="dlh-qP-a9G"/>
-                                    <barButtonItem systemItem="search" id="RhC-t9-Qdt"/>
+                                    <barButtonItem systemItem="search" id="RhC-t9-Qdt">
+                                        <connections>
+                                            <action selector="searchButton:" destination="Z18-wC-vy8" id="SbW-62-7dN"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="vr3-Fx-MMl"/>
                                     <barButtonItem title="Item" image="person" catalog="system" id="ONd-gd-N0R" userLabel="Profile"/>
                                 </items>
                             </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DBj-jh-wN3">
+                                <rect key="frame" x="50" y="202.33333333333337" width="328" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="9mT-Qt-gXb"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ik8-pl-OZk">
+                                <rect key="frame" x="20" y="494.33333333333326" width="388" height="348.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="348.66666666666674" id="Y2y-88-E1P"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="profileCell" textLabel="9u9-hm-c2q" imageView="Pgu-cW-gjN" style="IBUITableViewCellStyleDefault" id="xWz-Lg-QbP">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="388" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xWz-Lg-QbP" id="Qax-e1-yjr">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9u9-hm-c2q">
+                                                    <rect key="frame" x="79" y="0.0" width="289" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="gorilla-glue-4" id="Pgu-cW-gjN">
+                                                    <rect key="frame" x="20" y="0.0" width="44" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7N-lf-PXO">
+                                <rect key="frame" x="150" y="378.33333333333331" width="128" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Select Photo"/>
+                                <connections>
+                                    <action selector="selectPhotoButton:" destination="Z18-wC-vy8" eventType="touchUpInside" id="aND-LI-RQg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3K7-3G-LWg"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="3K7-3G-LWg" firstAttribute="trailing" secondItem="Ik8-pl-OZk" secondAttribute="trailing" constant="20" id="0m0-N6-wza"/>
                             <constraint firstItem="ZKA-74-wFL" firstAttribute="trailing" secondItem="3K7-3G-LWg" secondAttribute="trailing" id="3l9-xb-6Ev"/>
+                            <constraint firstItem="ZKA-74-wFL" firstAttribute="top" secondItem="Ik8-pl-OZk" secondAttribute="bottom" id="ACb-sT-N6Z"/>
+                            <constraint firstItem="DBj-jh-wN3" firstAttribute="top" secondItem="h84-dd-aNW" secondAttribute="bottom" constant="20" id="CqK-KH-hsf"/>
                             <constraint firstItem="ZKA-74-wFL" firstAttribute="bottom" secondItem="3K7-3G-LWg" secondAttribute="bottom" id="DPG-fx-K12"/>
+                            <constraint firstItem="Ik8-pl-OZk" firstAttribute="centerX" secondItem="C7N-lf-PXO" secondAttribute="centerX" id="Gok-dR-aDt"/>
+                            <constraint firstItem="3K7-3G-LWg" firstAttribute="trailing" secondItem="DBj-jh-wN3" secondAttribute="trailing" constant="50" id="Lig-fN-Ddp"/>
+                            <constraint firstItem="DBj-jh-wN3" firstAttribute="leading" secondItem="3K7-3G-LWg" secondAttribute="leading" constant="50" id="UPo-ph-H5o"/>
+                            <constraint firstItem="Ik8-pl-OZk" firstAttribute="leading" secondItem="3K7-3G-LWg" secondAttribute="leading" constant="20" id="Y1m-1a-lZV"/>
+                            <constraint firstItem="3K7-3G-LWg" firstAttribute="trailing" secondItem="C7N-lf-PXO" secondAttribute="trailing" constant="150" id="Zrb-D1-bPv"/>
+                            <constraint firstItem="C7N-lf-PXO" firstAttribute="top" secondItem="DBj-jh-wN3" secondAttribute="bottom" constant="16" id="cy6-np-cg2"/>
                             <constraint firstItem="h84-dd-aNW" firstAttribute="trailing" secondItem="3K7-3G-LWg" secondAttribute="trailing" id="egr-EQ-Od7"/>
                             <constraint firstItem="ZKA-74-wFL" firstAttribute="leading" secondItem="3K7-3G-LWg" secondAttribute="leading" id="fFH-Ue-HYA"/>
                             <constraint firstItem="h84-dd-aNW" firstAttribute="leading" secondItem="3K7-3G-LWg" secondAttribute="leading" id="jr3-dN-Pct"/>
                             <constraint firstItem="h84-dd-aNW" firstAttribute="top" secondItem="3K7-3G-LWg" secondAttribute="top" id="nJi-oE-WCX"/>
+                            <constraint firstItem="Ik8-pl-OZk" firstAttribute="top" secondItem="C7N-lf-PXO" secondAttribute="bottom" constant="84" id="uYL-9g-Fp0"/>
+                            <constraint firstItem="Ik8-pl-OZk" firstAttribute="top" secondItem="C7N-lf-PXO" secondAttribute="bottom" constant="84" id="z9z-w8-7Hl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sB3-Xh-EQi"/>
+                    <connections>
+                        <outlet property="profileImage" destination="DBj-jh-wN3" id="mzb-7l-4qp"/>
+                        <outlet property="tableView" destination="Ik8-pl-OZk" id="ROd-jN-gor"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7v-4B-Lko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1018,14 +1101,23 @@
         <image name="mendo-breath" width="800" height="658"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

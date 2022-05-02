@@ -122,7 +122,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if searchText != "" {
             
              filteredArray = filteredArray.filter({ (strain) -> Bool in
-                 return strain.nameOf.lowercased().range(of: searchText!.lowercased()) != nil
+                 return strain.typeOf.range(of: searchText!) != nil
              })
         }
         
@@ -131,7 +131,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             filteredArray = filteredArray.filter({
                 
                 // Using $0 to represent the current element instead of naming the parameter.
-                $0.typeOf.range(of: scopeTitle) != nil
+                $0.nameOf.range(of: scopeTitle) != nil
             })
         }
         DispatchQueue.main.async {
@@ -141,6 +141,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         updateSearchResults(for: searchController)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func Parse(jsonObject: [Any]? ) {

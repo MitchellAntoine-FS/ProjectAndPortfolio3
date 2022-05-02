@@ -11,7 +11,6 @@ import FirebaseStorage
 class DetailsViewController: UIViewController {
     
     var strain: Strains!
-    var profileArray: [Strains] = []
     
     @IBOutlet weak var strainImage: UIImageView!
     @IBOutlet weak var strainName: UILabel!
@@ -26,7 +25,6 @@ class DetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setUI()
-        SetupCell(imageString: strain.imageUrl)
         
     }
     
@@ -38,12 +36,7 @@ class DetailsViewController: UIViewController {
         self.conditionLabel.text = strain.conditionOf
         self.effectsLabel.text = strain.effectsOf
         
-        
-    }
-    
-    func SetupCell(imageString: String) {
-        
-        
+        let imageString = strain.imageUrl
         do {
 
         if imageString.contains("http"),
@@ -64,12 +57,13 @@ class DetailsViewController: UIViewController {
             print(error.localizedDescription)
             assertionFailure();
         }
+        
     }
     
     @IBAction func saveToProfile(_ sender: Any) {
         
-        profileArray.append(strain)
-        
+        UserDefaults.standard.set(strain.imageUrl, forKey: "imageUrl")
+        UserDefaults.standard.set(strain.nameOf, forKey: "name")
         
     }
     
@@ -77,6 +71,12 @@ class DetailsViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
+    @IBAction func searchButton(_ sender: UIBarButtonItem) {
+        navigationController?.pushViewController(SearchViewController(), animated: true)
+    }
     
-
+    @IBAction func profileButton(_ sender: UIBarButtonItem) {
+        navigationController?.pushViewController(ProfileViewController(), animated: true)
+    }
+    
 }

@@ -15,7 +15,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var errorTextField: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class SignUpViewController: UIViewController {
     func setUpElements() {
         
         // Hide error label
-        errorTextField.alpha = 0
+        errorLabel.alpha = 0
         
         // Style the textFileds
         Utilities.styleTextField(firstNameTextField)
@@ -86,8 +86,8 @@ class SignUpViewController: UIViewController {
     }
     
     func showError(_ message: String) {
-        errorTextField.text = message
-        errorTextField.alpha = 1
+        errorLabel.text = message
+        errorLabel.alpha = 1
     }
     
     func goToHomeView() {

@@ -15,8 +15,8 @@
 		645C0A392807763500405842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645C0A372807763500405842 /* LaunchScreen.storyboard */; };
 		645C0A412807859300405842 /* RejectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645C0A402807859300405842 /* RejectionViewController.swift */; };
 		645C0A4328078AE000405842 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645C0A4228078AE000405842 /* HomeViewController.swift */; };
+		6486677C2A2040FA0004B556 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6486677B2A2040F90004B556 /* GoogleService-Info.plist */; };
 		64B4BC15280F9B3400432EC6 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B4BC14280F9B3400432EC6 /* DetailsViewController.swift */; };
-		64B4BC172813A3B300432EC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64B4BC162813A3B300432EC6 /* GoogleService-Info.plist */; };
 		64B4BC1A2813A82600432EC6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 64B4BC192813A82600432EC6 /* FirebaseAuth */; };
 		64B4BC1C2813A82600432EC6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 64B4BC1B2813A82600432EC6 /* FirebaseStorage */; };
 		64B4BC1E2814EBCF00432EC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B4BC1D2814EBCF00432EC6 /* SignUpViewController.swift */; };
@@ -43,8 +43,8 @@
 		645C0A3A2807763500405842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		645C0A402807859300405842 /* RejectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectionViewController.swift; sourceTree = "<group>"; };
 		645C0A4228078AE000405842 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6486677B2A2040F90004B556 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64B4BC14280F9B3400432EC6 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		64B4BC162813A3B300432EC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64B4BC1D2814EBCF00432EC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		64B4BC1F2814EBE600432EC6 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		64B4BC212814F12100432EC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 				645C0A352807763500405842 /* Assets.xcassets */,
 				645C0A372807763500405842 /* LaunchScreen.storyboard */,
 				645C0A3A2807763500405842 /* Info.plist */,
-				64B4BC162813A3B300432EC6 /* GoogleService-Info.plist */,
+				6486677B2A2040F90004B556 /* GoogleService-Info.plist */,
 			);
 			path = MitchellAntoine_DankTank;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			files = (
 				64F30D5F280CE0C100171AE6 /* Strains.json in Resources */,
 				645C0A392807763500405842 /* LaunchScreen.storyboard in Resources */,
-				64B4BC172813A3B300432EC6 /* GoogleService-Info.plist in Resources */,
+				6486677C2A2040FA0004B556 /* GoogleService-Info.plist in Resources */,
 				645C0A362807763500405842 /* Assets.xcassets in Resources */,
 				645C0A342807762D00405842 /* Main.storyboard in Resources */,
 			);
@@ -376,6 +376,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9J2XD6FT5T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MitchellAntoine_DankTank/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -403,6 +404,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9J2XD6FT5T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MitchellAntoine_DankTank/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

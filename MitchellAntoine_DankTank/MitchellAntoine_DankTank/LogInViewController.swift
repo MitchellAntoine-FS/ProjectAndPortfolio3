@@ -41,9 +41,9 @@ class LogInViewController: UIViewController {
         
         // Validate the text fields
         
-        //
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        var password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+
         
         // Sign in the user
         Auth.auth().signIn(withEmail: email, password: password) { (results, error) in
@@ -53,9 +53,8 @@ class LogInViewController: UIViewController {
                 self.errorLabel.alpha = 1
             }
             else {
-                
+            
                 self.goToHomeView()
-
             }
         }
     }
